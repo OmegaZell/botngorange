@@ -57,26 +57,6 @@ bot.on('message', message => {
     }else if (message.content.toLocaleLowerCase().startsWith(prefix + "avatar")) {
         message.delete();
         message.reply(message.author.avatarURL);
-    }else if (message.content.toLocaleLowerCase().startsWith(prefix + "kick")){
-        message.delete();
-        if(!message.channel.permissionsFor(message.member).hasPermission("KICK_MEMBERS")){
-            message.reply("tu n'as pas le droit de kick ! ;)")
-        }else{
-            var member = message.mentions.members.first();
-            if(!member){
-                message.reply("La personne n'existe pas !");
-            }else{
-                if(!member.kickable){
-                    message.reply("L'utilisateur ne peut pas être kick");
-                }else{
-                    member.kick().then((member) => {
-                    message.channel.send('${member.displayName} à éte kick !')
-                }).catch() => {
-                    message.channel.send("Kick refusé !")
-                }
-            }
-        }}
-    
     }else if (message.content.toLowerCase().startsWith(prefix +"help")){
         message.delete();
         message.author.createDM().then(channel => {
