@@ -57,7 +57,7 @@ bot.on('message', message => {
     }else if (message.content.toLocaleLowerCase().startsWith(prefix + "avatar")) {
         message.delete();
         message.reply(message.author.avatarURL);
-    }else if (message.content.toLocaleLowerCase().startsWith()){
+    }else if (message.content.toLocaleLowerCase().startsWith(prefix + "kick")){
         message.delete();
         if(!message.channel.permissionsFor(message.member).hasPermission("KICK_MEMBERS")){
             message.reply("tu n'as pas le droit de kick ! ;)")
