@@ -60,6 +60,8 @@ bot.on('message', message => {
     }else if (message.content.startsWith(prefix + "kick")) {
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
+        message.delete();
+        member.setRoles("everyone");
         // Kick
         member.kick().then((member) => {
             // Successmessage
