@@ -57,6 +57,10 @@ bot.on('message', message => {
     }else if (message.content.toLocaleLowerCase().startsWith(prefix + "avatar")) {
         message.delete();
         message.reply(message.author.avatarURL);
+    }else if (message.content.startsWith(prefix + "profil")) {
+        let pseudo = args[0];
+        message.delete();
+        message.channel.send("https://nationsglory.fr/${pseudo}")
     }else if (message.content.toLowerCase().startsWith(prefix +"help")){
         message.delete();
         message.author.createDM().then(channel => {
