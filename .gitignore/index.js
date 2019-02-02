@@ -8,6 +8,13 @@ bot.on('ready', () => {
 
 bot.login(process.env.TOKEN);
 var prefix = "*" ;  
+function sendError(message, descritpion) {
+    message.channel.send({embed:  {
+        color : 14148332,
+        description: ':x:' + descritpion
+    }});
+}
+
 bot.on('message', message => {
     var prefix = "*" ;                                                                                                     
     let splitMessage = message.content.split(" ");
