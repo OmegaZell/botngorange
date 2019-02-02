@@ -16,7 +16,7 @@ function sendError(message, descritpion) {
 }
 
 bot.on('message', message => {
-    var prefix = "*" ;                                                                                                     
+    var prefix = "*" ;                                                                                                
     let splitMessage = message.content.split(" ");
     if(message.content.toLowerCase().startsWith(prefix + "stop")){
         if (message.member.hasPermission("ADMINISTRATOR")){
@@ -64,16 +64,18 @@ bot.on('message', message => {
     }else if (message.content.toLocaleLowerCase().startsWith(prefix + "avatar")) {
         message.delete();
         message.reply(message.author.avatarURL);
+
     }else if (splitMessage[0] === prefix + 'profil'){
         if(splitMessage.length === 2)
          message.channel.send('https://nationsglory.fr/profil/' + splitMessage[1]);
         else
+            sendError(message, 'Erreur, <*profil + pseudo>');
+    }else if (splitMessage[0] === prefix + 'ban'){
+        if(splitMessage.length === 4)
+         message.channel.send('https://nationsglory.fr/profil/' + splitMessage[1]);
+        else
             sendError(message, 'Erreur, problème dans les paramètres');
-       
-    }else if (message.content.startsWith(prefix + "profil")) {
-        let pseudo = args[0];
-        message.delete();
-        message.channel.send("https://nationsglory.fr/${pseudo}")
+    
     }else if (message.content.toLowerCase().startsWith(prefix +"help")){
         message.delete();
         message.author.createDM().then(channel => {
@@ -84,7 +86,9 @@ bot.on('message', message => {
             
             }})
 
-})}});
+})}
+
+});
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
@@ -92,4 +96,3 @@ bot.on('guildMemberAdd', member => {
 
     }).catch(console.error)
 });
-
