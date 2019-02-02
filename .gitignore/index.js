@@ -80,7 +80,7 @@ bot.on('message', message => {
         message.delete();
         message.author.createDM().then(channel => {
             channel.send({ embed :{
-                color:3447003,
+                color:0x1CF03C,
                 description : 'Bonjour ! avec ce bot discord vous avez acces à :',
                 fields:[{name: '*codex' ,value :' Envoie le lien du codex.'},{name: '*forum' ,value: 'Envoie le lien du forum.'}, {name: '*regle' ,value:'Envoie les règles internes du serveur.'}, {name:'*coran' ,value :'Envoie le GoogleDocs avec tout ce qui concernes les modérateurs.'}, {name:'*disband' ,value :'Envoie le GoogleDocs pour faire une demande de disband.'}, {name: '*wiki' ,value: 'Envoie le lien du Wiki Officiel de NationsGlory.'}, {name : '*plainte' ,value: 'Envoie le lien de la section plainte sur le forum.'}, {name: '*contrat' ,value : 'Envoie le lien du GoogleDocs pour désposer un contrat sur la tête d\'un joueur.'},{name: '*sanctions' ,value: 'Envoie sur le poste listant toutes les sanctions du serveur Orange.'}, {name: '*avatar' ,value: 'Vous envoie un lien de votre avatar discord.'}]
             
