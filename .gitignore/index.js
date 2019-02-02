@@ -10,7 +10,7 @@ bot.login(process.env.TOKEN);
 var prefix = "*" ;  
 bot.on('message', message => {
     var prefix = "*" ;                                                                                                     
-
+    let splitMessage = message.content.split(" ");
     if(message.content.toLowerCase().startsWith(prefix + "stop")){
         if (message.member.hasPermission("ADMINISTRATOR")){
             message.delete();
