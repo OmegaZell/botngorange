@@ -6,7 +6,7 @@ bot.on('ready', () => {
     console.log("Bot prêt !");
 });
 
-bot.login('NTI4MjQ2ODI4OTk5NzcwMTEy.DzUTeg.Abkh6xZm8GozilbJlYWu0JEwDP0');
+bot.login(process.env.TOKEN);
 var prefix = "*" ;  
 bot.on('message', message => {
     var prefix = "*" ;                                                                                                     
