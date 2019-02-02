@@ -10,7 +10,7 @@ bot.login(process.env.TOKEN);
 var prefix = "*" ;  
 function sendError(message, descritpion) {
     message.channel.send({embed:  {
-        color : 14148332,
+        color : 0xff0000,
         description: ':x:' + descritpion
     }});
 }
