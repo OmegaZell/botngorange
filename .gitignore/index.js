@@ -237,6 +237,26 @@ setInterval(function(){
         color: 3066993,
         title: 'timer',
         description: 'timer' }});
+    if(jour === 0){
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
     if(jour === 1) {
         if(heure === 21) {
             if(minutes === 20)
