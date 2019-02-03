@@ -228,14 +228,3 @@ bot.on('guildMemberAdd', member => {
 });
 
 
-setInterval(function(){
-    var date = new Date();
-    var jour = date.getDay();
-    var heure = date.getHours();
-    var minutes = date.getMinutes();
-    bot.channels.get("383558561030209538").send({embed: {
-        color: 3066993,
-        title: jour +" jours " +heure+" heures "+ minutes+ " minutes ",
-        description: 'une desc' }});
-
-}, 60000);
