@@ -23,6 +23,9 @@ bot.on('message', message => {
             message.delete();
             bot.destroy();
         }
+        
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "codex")){
         message.delete();
         message.channel.send({embed :{
@@ -31,6 +34,8 @@ bot.on('message', message => {
         }})
 
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "forum")){
         message.delete();
         message.channel.send({embed :{
@@ -38,6 +43,8 @@ bot.on('message', message => {
             description : 'Le lien du forum est https://forum.nationsglory.fr/index.php'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "regle")){
         message.delete();
         message.channel.send({embed :{
@@ -45,6 +52,8 @@ bot.on('message', message => {
             description : 'Le lien du code civil est https://glor.cc/reglesinternes'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "coran")){
         message.delete();
         message.channel.send({embed :{
@@ -52,6 +61,8 @@ bot.on('message', message => {
             description : 'Le lien du coran est https://glor.cc/coran'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "disband")){
         message.delete();
         message.channel.send({embed :{
@@ -59,6 +70,9 @@ bot.on('message', message => {
             description : 'Le lien des disbands est https://glor.cc/disbandorange'
         }})
 
+        
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "mdr")){
         message.delete();
         message.reply({embed :{
@@ -66,6 +80,9 @@ bot.on('message', message => {
             description : 'je te ez'
         }})
 
+        
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "wiki")){
         message.delete();
         message.channel.send({embed :{
@@ -73,6 +90,8 @@ bot.on('message', message => {
             description : 'Le lien du wiki est https://glor.cc/wiking'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "plainte")){
         message.delete();
         message.channel.send({embed :{
@@ -80,6 +99,8 @@ bot.on('message', message => {
             description : 'Le lien du wiki est https://glor.cc/plaintesorange'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith("ping")){
         message.delete();
         message.reply({embed :{
@@ -87,6 +108,8 @@ bot.on('message', message => {
             description : 'pong'
         }})
 
+        
+        
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "contrat")){
         message.delete();
         message.channel.send({embed :{
@@ -111,10 +134,22 @@ bot.on('message', message => {
             }})
 
         });
+    }else if(splitMessage[0] === prefix + 'say'){
+        message.delete();
+        const embed = new Discord.RichEmbed()
+        .setColor(0x954D23)
+        .setDescription(args.join(" "))
+        message.channel.send({embed})
+
+
+
+
     }else if (message.content.toLocaleLowerCase().startsWith(prefix + "avatar")) {
         message.delete();
         message.reply(message.author.avatarURL);
 
+        
+        
     }else if (splitMessage[0] === prefix + 'profil'){
         if(splitMessage.length === 2)
          message.channel.send({embed :{
@@ -124,13 +159,26 @@ bot.on('message', message => {
         else
             sendError(message, '<*profil + pseudo>');
 
+        
+        
+        
     }else if (message.content.toLowerCase().startsWith(prefix +"help")){
         message.delete();
         message.author.createDM().then(channel => {
             channel.send({ embed :{
                 color: 0x1CF03C,
                 description : 'Bonjour ! avec ce bot discord vous avez acces à :',
-                fields:[{name: '*codex' ,value :' Envoie le lien du codex.'},{name: '*forum' ,value: 'Envoie le lien du forum.'}, {name: '*regle' ,value:'Envoie les règles internes du serveur.'}, {name:'*coran' ,value :'Envoie le GoogleDocs avec tout ce qui concernes les modérateurs.'}, {name:'*disband' ,value :'Envoie le GoogleDocs pour faire une demande de disband.'}, {name: '*wiki' ,value: 'Envoie le lien du Wiki Officiel de NationsGlory.'}, {name : '*plainte' ,value: 'Envoie le lien de la section plainte sur le forum.'}, {name: '*contrat' ,value : 'Envoie le lien du GoogleDocs pour désposer un contrat sur la tête d\'un joueur.'},{name: '*sanctions' ,value: 'Envoie sur le poste listant toutes les sanctions du serveur Orange.'}, {name: '*avatar' ,value: 'Vous envoie un lien de votre avatar discord.'}]
+                fields:[{name: '*codex' ,value :' Envoie le lien du codex.'},{name: '*forum' ,value: 'Envoie le lien du forum.'}, 
+                        {name: '*regle' ,value:'Envoie les règles internes du serveur.'}, 
+                        {name:'*coran' ,value :'Envoie le GoogleDocs avec tout ce qui concernes les modérateurs.'}, 
+                        {name:'*disband' ,value :'Envoie le GoogleDocs pour faire une demande de disband.'}, 
+                        {name: '*wiki' ,value: 'Envoie le lien du Wiki Officiel de NationsGlory.'}, 
+                        {name : '*plainte' ,value: 'Envoie le lien de la section plainte sur le forum.'}, 
+                        {name: '*contrat' ,value : 'Envoie le lien du GoogleDocs pour désposer un contrat sur la tête d\'un joueur.'},
+                        {name: '*sanctions' ,value: 'Envoie sur le poste listant toutes les sanctions du serveur Orange.'}, 
+                        {name: '*avatar' ,value: 'Vous envoie un lien de votre avatar discord.'}
+                        {name: '*say', value: 'Envoie un message global.'}
+                       ]{name: '*ban', value: 'Envoie un message global.'}
             
             }})
 
