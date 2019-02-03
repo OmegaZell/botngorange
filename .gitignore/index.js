@@ -233,7 +233,7 @@ setInterval(function(){
     var jour = date.getDay();
     var heure = date.getHours();
     var minutes = date.getMinutes();
-    bot.channels.get("541204373842296854").send({embed: {
+    bot.channels.get("383558561030209538").send({embed: {
         color: 3066993,
         title: jour +" jours " +heure+" heures "+ minutes+ " minutes ",
         description: 'une desc' }});
