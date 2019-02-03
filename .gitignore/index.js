@@ -226,3 +226,155 @@ bot.on('guildMemberAdd', member => {
 
     }).catch(console.error)
 });
+
+
+setInterval(function(){
+    var date = new Date();
+    var jour = date.getDay();
+    var heure = date.getHours();
+    var minutes = date.getMinutes();
+    bot.channels.get("383558561030209538").send({embed: {
+        color: 3066993,
+        title: 'Example 1',
+        description: 'une desc' }});
+    if(jour === 1) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
+    if(jour === 2){
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
+    if(jour === 3) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    } 
+    if(jour === 4) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
+    if(jour === 5) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
+    if(jour === 6) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }
+    if(jour === 7) {
+        if(heure === 21) {
+            if(minutes === 20)
+                 bot.channels.get("383558561030209538").send({embed: {
+             color: 3066993,
+             title: 'Example 1',
+             description: 'une desc' }});
+            if(minutes === 30)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 3447003,
+             title: 'Example 2',
+             description: 'une desc' }});
+            if(minutes === 40)
+                bot.channels.get("383558561030209538").send({embed: {
+             color: 15844367,
+             title: 'Example 3',
+             description: 'une desc' }});
+        }
+        
+    }   
+}, 60000);
