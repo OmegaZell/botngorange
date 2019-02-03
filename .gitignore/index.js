@@ -138,7 +138,7 @@ bot.on('message', message => {
             "\nraison: " + splitMessage[5] + " "+splitMessage[6]+ " "+splitMessage[7] + " "+splitMessage[8] + " "+splitMessage[9] + " "+splitMessage[10]
         }})
         else
-            sendError(message, '<*profil + pseudo + plateforme + date + durée + raison>')
+            sendError(message, '<*ban + pseudo + plateforme + date + durée + raison>')
 
 
 
