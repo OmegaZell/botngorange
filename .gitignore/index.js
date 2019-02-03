@@ -24,6 +24,11 @@ bot.on('message', message => {
             message.delete();
             bot.destroy();
         }
+    }else if(message.content.toLowerCase().startsWith(prefix + "start")){
+        if (message.member.hasPermission("ADMINISTRATOR")){
+            message.delete();
+            bot.login();
+        }
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "codex")){
         message.delete();
         message.channel.send({embed :{
