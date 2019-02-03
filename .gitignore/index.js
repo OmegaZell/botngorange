@@ -60,7 +60,7 @@ bot.on('message', message => {
             description : 'Le lien des disbands est https://glor.cc/disbandorange'
         }})
 
-    }else if(message.content.toLocaleLowerCase().startsWith(prefix + "mdr")){
+    }else if(message.content.toLocaleLowerCase().startsWith(prefix + "ez")){
         message.delete();
         message.reply({embed :{
             color: 0x1CF03C,
@@ -83,7 +83,7 @@ bot.on('message', message => {
 
     }else if(message.content.toLocaleLowerCase().startsWith("ping")){
         message.delete();
-        message.reply({embed :{
+        message.channel.send({embed :{
             color: 0x1CF03C,
             description : 'pong'
         }})
