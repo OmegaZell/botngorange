@@ -235,8 +235,8 @@ setInterval(function(){
     var minutes = date.getMinutes();
     bot.channels.get("383558561030209538").send({embed: {
         color: 3066993,
-        title: 'Example 1',
-        description: 'une desc' }});
+        title: 'timer',
+        description: 'timer' }});
     if(jour === 1) {
         if(heure === 21) {
             if(minutes === 20)
