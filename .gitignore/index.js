@@ -117,11 +117,16 @@ bot.on('message', message => {
         message.reply(message.author.avatarURL);
 
     }else if (splitMessage[0] === prefix + 'profil'){
-        if(splitMessage.length === 2)
-         message.channel.send({embed :{
-            color: 0x1CF03C,
-            description : 'https://nationsglory.fr/profil/' + splitMessage[1]
-        }})
+        
+        if(splitMessage.length === 2){
+        var EmbedProfil = new Discord.RichEmbed()
+            .setColor ("0x1CF03C")
+            .setDescription ('https://nationsglory.fr/profil/' + splitMessage[1])
+            .setImage("https://nationsglory.fr/utilitaire/skin_renderer.php?vr=340&hr=30&ratio=4&format=png&displayHair=true&headOnly=true&user=" + splitMessage[1])
+            
+
+        message.channel.sendEmbed(EmbedProfil);
+        }
         else
             sendError(message, '<*profil + pseudo>');
 
