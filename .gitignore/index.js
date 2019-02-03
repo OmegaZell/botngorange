@@ -7,15 +7,6 @@ bot.on('ready', () => {
 });
 
 bot.login(process.env.TOKEN);
-var prefix = "*" ;  
-function sendError(message, descritpion) {
-    message.channel.send({embed:  {
-        color : 0xff0000,
-        description: ':x:' + descritpion
-    }});
-}
-
-bot.on('message', message => {
     var prefix = "*" ;                                                                                                
     let splitMessage = message.content.split(" ");
     let args = message.content.split(" ").slice(1);
@@ -135,10 +126,38 @@ bot.on('message', message => {
          message.channel.send({embed :{
             color: 0x1CF03C,
             description : "pseudo ban: " + splitMessage[1] + "\nplateforme: " + splitMessage[2] + "\ndate: " + splitMessage[3] + "\ndurée: " + splitMessage[4] + 
-            "\nraison: " + splitMessage[5] + " "+splitMessage[6]+ " "+splitMessage[7] + " "+splitMessage[8] + " "+splitMessage[9] + " "+splitMessage[10]
+            "\nraison: " + splitMessage[5]+ " "+splitMessage[6]+ " "+splitMessage[7] + " "+splitMessage[8] + " "+splitMessage[9] + " "+splitMessage[10]
         }})
         else
             sendError(message, '*ban <pseudo> <plateforme> <date> <durée> <raison>')
+
+
+
+
+    }else if (splitMessage[0] === prefix + 'jail'){
+        message.delete();        
+        if(splitMessage.length > 4)
+         message.channel.send({embed :{
+            color: 0x1CF03C,
+            description : "pseudo jail: " + splitMessage[1] + "\ndate: " + splitMessage[2] + "\ndurée: " + splitMessage[3] +  
+            "\nraison: " + splitMessage[4] + " "+splitMessage[5]+ " "+splitMessage[6] + " "+splitMessage[7] + " "+splitMessage[8] + " "+splitMessage[9]
+        }})
+        else
+            sendError(message, '*jail <pseudo> <date> <durée> <raison>')
+
+
+
+
+    }else if (splitMessage[0] === prefix + 'mute'){
+        message.delete();        
+        if(splitMessage.length > 4)
+         message.channel.send({embed :{
+            color: 0x1CF03C,
+            description : "pseudo mute: " + splitMessage[1] + "\ndate: " + splitMessage[2] + "\ndurée: " + splitMessage[3] +  
+            "\nraison: " + splitMessage[4] + " "+splitMessage[5]+ " "+splitMessage[6] + " "+splitMessage[7] + " "+splitMessage[8] + " "+splitMessage[9]
+        }})
+        else
+            sendError(message, '*mute <pseudo> <date> <durée> <raison>')
 
 
 
@@ -184,4 +203,3 @@ bot.on('guildMemberAdd', member => {
 
     }).catch(console.error)
 });
-
