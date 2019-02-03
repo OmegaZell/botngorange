@@ -200,7 +200,7 @@ bot.on('message', message => {
                     {name: '*ban', value: 'Mets un message avec <pseudo> <plateforme> <date> <durée> <raison>.'},
                     {name: '*mute', value: 'Mets un message avec <pseudo> <date> <durée> <raison>.'},
                     {name: '*jail', value: 'Mets un message avec <pseudo> <date> <durée> <raison>.'}]
-            footer: "J'espere que le bot vous sera utile ;)", 
+            
         }})
 
 })}
