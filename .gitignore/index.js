@@ -7,6 +7,15 @@ bot.on('ready', () => {
 });
 
 bot.login(process.env.TOKEN);
+var prefix = "*" ;  
+function sendError(message, descritpion) {
+    message.channel.send({embed:  {
+        color : 0xff0000,
+        description: ':x:' + descritpion
+    }});
+}
+
+bot.on('message', message => {
     var prefix = "*" ;                                                                                                
     let splitMessage = message.content.split(" ");
     let args = message.content.split(" ").slice(1);
