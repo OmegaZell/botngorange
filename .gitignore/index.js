@@ -197,7 +197,9 @@ bot.on('message', message => {
                     {name: '*sanctions' ,value: 'Envoie sur le poste listant toutes les sanctions du serveur Orange.'}, 
                     {name: '*avatar' ,value: 'Vous envoie un lien de votre avatar discord.'},
                     {name: '*say', value: 'Envoie un message global.'},
-                    {name: '*ban', value: 'Envoie un message global.'}]
+                    {name: '*ban', value: 'Mets un message avec <pseudo> <plateforme> <date> <durée> <raison>.'},
+                    {name: '*mute', value: 'Mets un message avec <pseudo> <date> <durée> <raison>.'},
+                    {name: '*jail', value: 'Mets un message avec <pseudo> <date> <durée> <raison>.'}]
         
         }})
 
