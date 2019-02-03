@@ -103,6 +103,13 @@ bot.on('message', message => {
             description : 'liste des sanctions https://glor.cc/listesanctions'
         }})
 
+    }else if(message.content.toLocaleLowerCase().startsWith(prefix + "mod")){
+        message.delete();
+        message.channel.send({embed :{
+            color: 0x1CF03C,
+            description : 'liste des mods autorisés sur NationsGlory https://glor.cc/modautorise'
+        }})
+
     }else if(message.content.toLocaleLowerCase().startsWith(prefix + "tg")){
         message.delete();
         message.author.createDM().then(channel => {
