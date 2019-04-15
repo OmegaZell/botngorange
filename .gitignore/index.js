@@ -183,6 +183,19 @@ bot.on('message', message => {
 
 
 
+    }else if (splitMessage[0] === prefix + 'mutecommerce'){
+        message.delete();
+        if(splitMessage.length > 4)
+            message.channel.send({embed :{
+                color: 0x1CF03C,
+                description : "Pseudo : " + splitMessage[1] + "\nHeure : " + splitMessage[2] + "\Date d'unmute" + splitMessage[3] + "\Raison : " + splitMessage[4]+" " + splitMessage[5] +" " + splitMessage[6]
+        }})
+        else
+            sendError(message, '*mutecommerce <Pseudo du mute> <Heure> <Date unmute> <Raison>')
+
+
+
+
     }else if(splitMessage[0] === prefix + 'say'){
         message.delete();
         const embed = new Discord.RichEmbed()
@@ -226,5 +239,3 @@ bot.on('guildMemberAdd', member => {
 
     }).catch(console.error)
 });
-
-
