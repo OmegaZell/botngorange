@@ -188,7 +188,7 @@ bot.on('message', message => {
         if(splitMessage.length > 4)
             message.channel.send({embed :{
                 color: 0x1CF03C,
-                description : "Pseudo : " + splitMessage[1] + "\nHeure : " + splitMessage[2] + "\Date d'unmute" + splitMessage[3] + "\Raison : " + splitMessage[4]+" " + splitMessage[5] +" " + splitMessage[6]
+                description : "Pseudo : " + splitMessage[1] + "\nHeure : " + splitMessage[2] + "\nDate d'unmute" + splitMessage[3] + "\nRaison : " + splitMessage[4]+" " + splitMessage[5] +" " + splitMessage[6]
         }})
         else
             sendError(message, '*mutecommerce <Pseudo du mute> <Heure> <Date unmute> <Raison>')
